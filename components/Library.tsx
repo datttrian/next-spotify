@@ -7,18 +7,18 @@ import { useUser } from "@/hooks/useUser";
 import useUploadModal from "@/hooks/useUploadModal";
 
 const Library = () => {
-  const authModal = useAuthModal()
-  const uploadModal = useUploadModal()
-  const { user } = useUser()
+  const authModal = useAuthModal();
+  const uploadModal = useUploadModal();
+  const { user } = useUser();
 
   const onClick = () => {
     if (!user) {
-      return authModal.onOpen()
+      return authModal.onOpen();
     }
 
     // Check for subscription
 
-    return uploadModal.onOpen()
+    return uploadModal.onOpen();
   };
 
   return (

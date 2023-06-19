@@ -18,10 +18,10 @@ const ModalProvider = () => {
 
   return (
     <>
-        <AuthModal />
-        <UploadModal />
+      <AuthModal />
+      <UploadModal />
     </>
-  )
+  );
 };
 
 export default ModalProvider;

@@ -12,8 +12,6 @@ import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModals";
 import { useUser } from "@/hooks/useUser";
 
-
-
 interface HeaderProps {
   children: React.ReactNode;
   className?: string;
@@ -31,9 +29,9 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
     // Reset any playing songs
     router.refresh();
     if (error) {
-      toast.error(error.message)
+      toast.error(error.message);
     } else {
-        toast.success('Logged out!')
+      toast.success("Logged out!");
     }
   };
 
@@ -74,20 +72,16 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
         <div className="flex justify-between items-center gap-x-4">
           {user ? (
             <div className="flex gap-x-4 items-center">
-                <Button
-                    onClick={handleLogout}
-                    className="bg-white px-6 py-2"
-                >
-                    Logout
-                </Button>
+              <Button onClick={handleLogout} className="bg-white px-6 py-2">
+                Logout
+              </Button>
 
-                <Button
-                    onClick={() => router.push('/acount')}
-                    className="bg-white"
-                >
-                    <FaUserAlt />
-                </Button>
-
+              <Button
+                onClick={() => router.push("/acount")}
+                className="bg-white"
+              >
+                <FaUserAlt />
+              </Button>
             </div>
           ) : (
             <>
