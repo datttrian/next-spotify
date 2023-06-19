@@ -10,6 +10,7 @@ import { useState } from "react";
 type UserContextType = {
   accessToken: string | null;
   user: User | null;
+  isLoading: boolean;
   userDetails: UserDetails | null;
 };
 
